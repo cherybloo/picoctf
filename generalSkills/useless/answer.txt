@@ -1,0 +1,14 @@
+Author: Loic Shema
+Description
+There's an interesting script in the user's home directory The work computer is running SSH. We've been given a script which performs some basic calculations, explore the script and find a flag.
+
+Hostname: saturn.picoctf.net
+Port:     56279
+Username: picoplayer
+Password: password
+===============================================================
+
+1) Use ssh -p 56279 picoplayer@saturn.picoctf.net to get inside the ssh
+2) Use the command man useless to get all the information about this script
+
+FLAG: picoCTF{us3l3ss_ch4ll3ng3_3xpl0it3d_4151}

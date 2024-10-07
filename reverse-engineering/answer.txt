@@ -1,0 +1,13 @@
+Author: LT 'syreal' Jones
+Description
+This service can provide you with a random number, but can it do anything else? Connect to the program with netcat: $ nc saturn.picoctf.net 58609 The program's source code can be downloaded here.
+================================================================================================
+
+
+1) Use the command: nc saturn.picoctf.net 58609
+2) Try to type getRandomNumber
+3) Read the source code in picker-I.py
+4) Execute the netcat command from number 1 and give "win" (WITHOUT THE QUOTATION MARK)
+5) Convert the result to char. Search: convert unicode to char
+
+FLAG: picoCTF{4_d14m0nd_1n_7h3_r0ugh_6e04440d}
