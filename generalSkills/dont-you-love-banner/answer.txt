@@ -1,0 +1,23 @@
+This challenge is all about symlinks
+Try to read how to use them first
+
+==============================================================================
+Author: Loic Shema / syreal
+Description
+Can you abuse the banner? The server has been leaking some crucial information on tethys.picoctf.net 56114. Use the leaked information to get to the server. To connect to the running application use nc tethys.picoctf.net 64901. From the above information abuse the machine and find the flag in the /root directory.
+==============================================================================
+
+1) Use the command nc tethys.picoctf.net 56114 -> you'll find the password there
+2) Use the command nc tethys.picoctf.net 64901 to get into the server. Use the password from number 1
+	Password1: My_Passw@rd_@1234
+	Password2: defcon
+	Password3: john
+3) Go to /root
+4) Read the script.py carefully. They use the path "/home/player/banner"
+5) The flag.txt cannot be read directly. So we need to create a symlinks to this file
+6) Head up to /home/player/ -> Delete the banner with rm -rf banner
+7) While you are in /home/player, create a symlink with ln -s /root/flag.txt banner
+8) Go out from the nc with exit
+9) Go inside the server again and you'll be greet with the flag!
+
+CONGRATS!
